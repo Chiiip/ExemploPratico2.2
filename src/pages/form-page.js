@@ -1,56 +1,56 @@
 import React from "react";
-// import { useFormik } from 'formik';
-// import has from 'lodash/has';
-// import axios from 'axios';
-// import {
-//   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-// } from 'recharts';
+import { useFormik } from 'formik';
+import has from 'lodash/has';
+import axios from 'axios';
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+} from 'recharts';
 
-// const data = [
-//   {
-//     name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
-//   },
-//   {
-//     name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
-//   },
-//   {
-//     name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
-//   },
-//   {
-//     name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
-//   },
-//   {
-//     name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-//   },
-//   {
-//     name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-//   },
-//   {
-//     name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
-//   },
-// ];
+const data = [
+  {
+    name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
+  },
+  {
+    name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
+  },
+  {
+    name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
+  },
+  {
+    name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
+  },
+  {
+    name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
+  },
+  {
+    name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
+  },
+  {
+    name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
+  },
+];
 
 const FormPage = (props) => {
-  // useEffect(() => {
-  //   axios.get('localhost:3333/user?ID=12345')
-  //     .then(result => {
-  //       console.log(result);
-  //   });
-  //   console.log(has([1, 2, 1, 2], 10));
-  // });
-  // const formik = useFormik({
-  //   initialValues: {
-  //     firstName: '',
-  //     lastName: '',
-  //     email: '',
-  //   },
-  //   onSubmit: values => {
-  //     alert(JSON.stringify(values, null, 2));
-  //   },
-  // });
+  useEffect(() => {
+    axios.get('localhost:3333/user?ID=12345')
+      .then(result => {
+        console.log(result);
+    });
+    console.log(has([1, 2, 1, 2], 10));
+  });
+  const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+    },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    },
+  });
   return (
     <div>
-    {/* <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit}>
       <label htmlFor="firstName">First Name</label>
       <input
         id="firstName"
@@ -92,7 +92,7 @@ const FormPage = (props) => {
         <Legend />
         <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
         <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-      </LineChart> */}
+      </LineChart>
       </div>
   )
 };
